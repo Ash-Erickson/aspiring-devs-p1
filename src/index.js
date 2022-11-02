@@ -1,6 +1,3 @@
-window.onload = () => {
-    console.log("hello world")
-}
 
 var story = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a turpis feugiat, lobortis nulla id, rutrum nisi. In imperdiet tempus velit, malesuada porttitor nunc congue id. Praesent varius, turpis vel faucibus iaculis, dolor orci fermentum ipsum, eget pharetra magna tortor eget justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet volutpat enim a dapibus. Nulla et porttitor elit. Curabitur id mollis urna, eu consequat nisi. Nam a elit dignissim, tincidunt ligula non, fringilla quam.
 
@@ -14,4 +11,23 @@ Duis volutpat malesuada turpis ac aliquam. Suspendisse rutrum ultrices metus et 
 
 var title = "Lorem Ipsum"
 
-var author;
+//prints title and story to DOM
+const myTitle = document.querySelector(".title");
+myTitle.innerHTML += ` ${title}`;
+
+const myPost = document.querySelector(".post");
+myPost.innerHTML += ` <br> ${story}`;
+
+//gets user input and prints it to DOM
+function getUserInput(){
+    var authName = document.getElementById("authorName").value;
+
+
+    const myInput = document.querySelector(".author");
+    myInput.innerHTML += ` <br> ${authName}`;
+
+}
+//clears input box 
+function clearInput(){
+    document.getElementById("authorName").value="";
+}
